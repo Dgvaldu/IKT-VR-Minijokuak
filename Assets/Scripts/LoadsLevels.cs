@@ -16,6 +16,12 @@ public class LoadsLevels : MonoBehaviour
     [SerializeField]
     Slider Barra;
 
+    [SerializeField]
+    AudioSource MenuVoces;
+
+    [SerializeField]
+    Light DLight;
+
     public void EscogerMJuego()
     {
         string izena = ParaJugar.options[ParaJugar.value].text;
@@ -28,5 +34,17 @@ public class LoadsLevels : MonoBehaviour
     public void SubOBajMusica()
     {
         MenuMusica.volume = Barra.value; 
+    }
+    /*public void SubOBajLuz()
+    {
+        DLight.intensity = Barra.value *5f;
+    }*/
+    private void Update()
+    {
+        DLight.intensity = Barra.value * 5f;
+    }
+    public void SubOBajVoces()
+    {
+        MenuVoces.volume = Barra.value;
     }
 }
