@@ -17,10 +17,19 @@ public class LoadsLevels : MonoBehaviour
     Slider Barra;
 
     [SerializeField]
+    Slider Barra1;
+
+    [SerializeField]
+    Slider Barra2;
+
+    [SerializeField]
     AudioSource MenuVoces;
 
     [SerializeField]
     Light DLight;
+
+    /*[SerializeField]
+    GameObject DLight;*/
 
     public void EscogerMJuego()
     {
@@ -35,16 +44,17 @@ public class LoadsLevels : MonoBehaviour
     {
         MenuMusica.volume = Barra.value; 
     }
-    /*public void SubOBajLuz()
+    public void SubOBajLuz()
     {
-        DLight.intensity = Barra.value *5f;
-    }*/
-    private void Update()
+        DLight.intensity = Barra2.value * 5f;
+        //DLight.GetComponent<Light>().intensity = Barra.value * 5f;
+    }
+    /*private void Update()
     {
         DLight.intensity = Barra.value * 5f;
-    }
+    }*/
     public void SubOBajVoces()
     {
-        MenuVoces.volume = Barra.value;
+        MenuVoces.volume = Barra1.value;
     }
 }
