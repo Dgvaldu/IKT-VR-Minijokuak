@@ -51,10 +51,11 @@ public class LoadsLevels : MonoBehaviour
     }
     /*private void Update()
     {
-        DLight.intensity = Barra.value * 5f;
+        
     }*/
     public void SubOBajVoces()
     {
         MenuVoces.volume = Barra1.value;
+        MenuVoces.Play();
     }
 }
