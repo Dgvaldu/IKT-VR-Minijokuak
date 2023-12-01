@@ -6,8 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/MainMenu.unity
+    guid: 6cdcc0b0270da29408631061a74f38e0
+  - enabled: 1
+    path: Assets/Scenes/Jolastu Mantenimendua minijokua.unity
+    guid: 39a6dfb19be9723418df7c045be754f4
+  - enabled: 1
+    path: Assets/Scenes/Jolastu Sistemak minijokua.unity
+    guid: 62dc17c882d02d144a1d7a433d1bc73f
+  - enabled: 1
+    path: Assets/Scenes/Jolastu Sareak minijokua.unity
+    guid: 71ef4d8598755194ebc5002a270c36e0
+  - enabled: 1
+    path: Assets/Scenes/Jolastu Segurtasun minijokua.unity
+    guid: 5a1e62c373c28424185660792f537341
+  - enabled: 1
+    path: Assets/Scenes/Jolastu Zerbitzuak minijokua.unity
+    guid: 0dcc19438b370b3418afab5e62e15321
+  - enabled: 1
+    path: Assets/Scenes/Jolastu Sistemak 2 minijokua.unity
+    guid: c95ba739c5833074c93a2e6bd8460e57
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 831c5e14ca25f7b47b2e47f9da573851,
       type: 2}

@@ -10,9 +10,33 @@ public class LoadsLevels : MonoBehaviour
     [SerializeField]
     Dropdown ParaJugar;
 
+    #region Musica
     [SerializeField]
-    AudioSource MenuMusica;
+    AudioSource MenuMusicaYmas;
 
+    [SerializeField]
+    AudioClip MenuMusica;
+
+    [SerializeField]
+    AudioClip MantenimenMusica;
+
+    [SerializeField]
+    AudioClip SistemaMusica;
+
+    [SerializeField]
+    AudioClip SareMusica;
+
+    [SerializeField]
+    AudioClip SegurMusica;
+
+    [SerializeField]
+    AudioClip ZerbiMusica;
+
+    [SerializeField]
+    AudioClip Sistema2Musica;
+    #endregion
+    
+    #region Barras
     [SerializeField]
     Slider Barra;
 
@@ -21,6 +45,7 @@ public class LoadsLevels : MonoBehaviour
 
     [SerializeField]
     Slider Barra2;
+    #endregion
 
     [SerializeField]
     AudioSource MenuVoces;
@@ -28,9 +53,17 @@ public class LoadsLevels : MonoBehaviour
     [SerializeField]
     Light DLight;
 
+    float FB;
+    float FB1;
+    float FB2;
+
     /*[SerializeField]
     GameObject DLight;*/
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     public void EscogerMJuego()
     {
         string izena = ParaJugar.options[ParaJugar.value].text;
@@ -42,12 +75,14 @@ public class LoadsLevels : MonoBehaviour
     }
     public void SubOBajMusica()
     {
-        MenuMusica.volume = Barra.value; 
+        MenuMusicaYmas.volume = Barra.value;
+        FB = Barra.value;
     }
     public void SubOBajLuz()
     {
         DLight.intensity = Barra2.value * 5f;
         //DLight.GetComponent<Light>().intensity = Barra.value * 5f;
+        FB2 = Barra2.value;
     }
     /*private void Update()
     {
@@ -57,5 +92,45 @@ public class LoadsLevels : MonoBehaviour
     {
         MenuVoces.volume = Barra1.value;
         MenuVoces.Play();
+        FB1 = Barra1.value;
+    }
+    private void OnLevelWasLoaded(int level)
+    {
+
+        if (level == 0)
+        {
+            MenuMusicaYmas.clip = MenuMusica;
+            MenuMusicaYmas.Play();
+        }
+        else if (level == 1) 
+        {
+            MenuMusicaYmas.clip = MantenimenMusica;
+            MenuMusicaYmas.Play();
+        }
+        if (level == 2) 
+        {
+            MenuMusicaYmas.clip = SistemaMusica;
+            MenuMusicaYmas.Play();
+        }
+        if (level == 3)
+        {
+            MenuMusicaYmas.clip = SareMusica;
+            MenuMusicaYmas.Play();
+        }
+        if(level == 4)
+        {
+            MenuMusicaYmas.clip = SegurMusica;
+            MenuMusicaYmas.Play();
+        }
+        if(level == 5)
+        {
+            MenuMusicaYmas.clip = ZerbiMusica;
+            MenuMusicaYmas.Play();
+        }
+        if(level == 6)
+        {
+            MenuMusicaYmas.clip = Sistema2Musica;
+            MenuMusicaYmas.Play();
+        }
     }
 }
