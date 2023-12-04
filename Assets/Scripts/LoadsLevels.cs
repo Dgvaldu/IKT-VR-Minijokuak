@@ -47,8 +47,31 @@ public class LoadsLevels : MonoBehaviour
     Slider Barra2;
     #endregion
 
+    #region Voces
     [SerializeField]
     AudioSource MenuVoces;
+
+    [SerializeField]
+    AudioClip MenuVoces1;
+
+    [SerializeField]
+    AudioClip MenuVoces2;
+
+    [SerializeField]
+    AudioClip MenuVoces3;
+
+    [SerializeField] 
+    AudioClip MenuVoces4;
+
+    [SerializeField] 
+    AudioClip MenuVoces5;
+    
+    [SerializeField] 
+    AudioClip MenuVoces6;
+
+    [SerializeField]
+    AudioClip MenuVoces7;
+    #endregion
 
     [SerializeField]
     Light DLight;
@@ -105,36 +128,49 @@ public class LoadsLevels : MonoBehaviour
         {
             MenuMusicaYmas.clip = MenuMusica;
             MenuMusicaYmas.Play();
+            MenuVoces.clip = MenuVoces1;
         }
         else if (level == 1) 
         {
             MenuMusicaYmas.clip = MantenimenMusica;
             MenuMusicaYmas.Play();
+            MenuVoces.clip = MenuVoces2;
+            MenuVoces.Play();
         }
         if (level == 2) 
         {
             MenuMusicaYmas.clip = SistemaMusica;
             MenuMusicaYmas.Play();
+            MenuVoces.clip = MenuVoces3;
+            MenuVoces.Play();
         }
         if (level == 3)
         {
             MenuMusicaYmas.clip = SareMusica;
             MenuMusicaYmas.Play();
+            MenuVoces.clip = MenuVoces4;
+            MenuVoces.Play();
         }
         if(level == 4)
         {
             MenuMusicaYmas.clip = SegurMusica;
             MenuMusicaYmas.Play();
+            MenuVoces.clip = MenuVoces5;
+            MenuVoces.Play();
         }
         if(level == 5)
         {
             MenuMusicaYmas.clip = ZerbiMusica;
             MenuMusicaYmas.Play();
+            MenuVoces.clip = MenuVoces6;
+            MenuVoces.Play();
         }
         if(level == 6)
         {
             MenuMusicaYmas.clip = Sistema2Musica;
             MenuMusicaYmas.Play();
+            MenuVoces.clip = MenuVoces7;
+            MenuVoces.Play();
         }
     }
 }

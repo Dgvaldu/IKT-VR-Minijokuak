@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 356bb87c64b2fee4aa00222c62c4d5d8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 240823
+  packageName: "VirtualGrasp\u2122 (Test version)"
+  packageVersion: 1.6.3
+  assetPath: Assets/com.gleechi.unity.virtualgrasp/Samples/OculusIntegration/Prefabs/RawOculusHands.prefab
+  uploadId: 617679

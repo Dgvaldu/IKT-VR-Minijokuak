@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 82f2d9ce902d28141aebd8ac615904eb
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 240823
+  packageName: "VirtualGrasp\u2122 (Test version)"
+  packageVersion: 1.6.3
+  assetPath: Assets/com.gleechi.unity.virtualgrasp/Samples/OculusIntegration/README.md
+  uploadId: 617679
