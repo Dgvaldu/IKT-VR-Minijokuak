@@ -18,6 +18,9 @@ public class ControlDialogos : MonoBehaviour
     [SerializeField]
     private string scene;
 
+    [SerializeField]
+    ObjetoInteractable OInteractable;
+
     public void ActivarCartel(Textos textObjeto)
     {
         Debug.Log("MetodoActivarCartel");
@@ -42,11 +45,12 @@ public class ControlDialogos : MonoBehaviour
         if (colaDialogos.Count == 0)
         {
             CierraCartel();
-            if(sceneChangeDialog)
+            OInteractable.isQueueFilled = false;
+            if (sceneChangeDialog)
             {
                 SceneManager.LoadScene(scene);
             }
-            return;
+            return; 
         }
 
         string fraseActual = colaDialogos.Dequeue();
@@ -55,6 +59,7 @@ public class ControlDialogos : MonoBehaviour
     }
     public void CierraCartel()
     {
-        anim.SetBool("Cartel", false);
+        anim.SetBool("Dialogos", false);
+        OInteractable.isQueueFilled = false;
     }
 }

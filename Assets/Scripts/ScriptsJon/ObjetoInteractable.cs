@@ -9,7 +9,11 @@ public class ObjetoInteractable : MonoBehaviour
     [SerializeField]
     private ControlDialogos controlDialogos;
 
-    private bool isQueueFilled = false;
+    public bool isQueueFilled = false;
+
+    public float Tiempo = 3f;
+    bool denbora = false;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -17,20 +21,36 @@ public class ObjetoInteractable : MonoBehaviour
             controlDialogos.ActivarCartel(textos);
         }
     }
+
     private void OnTriggerStay(Collider other)
     {
+        Debug.Log(other.gameObject.name);
         if (other.gameObject.CompareTag("Player"))
         {
             if(!isQueueFilled)
             {
                 controlDialogos.ActivaTexto();
                 isQueueFilled = true;
+            }            
+            denbora = true;            
+        }
+    }
+
+    private void Update()
+    {
+        if (denbora == true)
+        {
+            if (Tiempo > 0)
+            {
+                Tiempo -= Time.deltaTime;
             }
-            if (Input.GetKeyDown(KeyCode.E))
+
+            if (Tiempo < 0)
             {
                 controlDialogos.SiguienteFrase();
+                Tiempo = 3f;
             }
-        }
+        }        
     }
 
     private void OnTriggerExit(Collider other)
@@ -38,6 +58,8 @@ public class ObjetoInteractable : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             controlDialogos.CierraCartel();
+            denbora = false;
         }
+        Tiempo = 4f;
     }
 }
