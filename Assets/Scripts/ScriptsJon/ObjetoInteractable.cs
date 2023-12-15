@@ -7,7 +7,7 @@ public class ObjetoInteractable : MonoBehaviour
 {
     public Textos textos;
     [SerializeField]
-    private ControlDialogos controlDialogos;
+    private DialogosHarrobitxo controlDialogos;
 
     public bool isQueueFilled = false;
 
@@ -24,7 +24,7 @@ public class ObjetoInteractable : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log(other.gameObject.name);
+        //Debug.Log(other.gameObject.name);
         if (other.gameObject.CompareTag("Player"))
         {
             if(!isQueueFilled)

@@ -96,10 +96,7 @@ public class LoadsLevels : MonoBehaviour
     {
         Application.Quit();
     }
-    public void BackMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
+    
     public void SubOBajMusica()
     {
         MenuMusicaYmas.volume = Barra.value;

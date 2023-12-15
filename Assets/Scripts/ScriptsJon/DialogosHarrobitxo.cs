@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class ControlDialogos : MonoBehaviour
+public class DialogosHarrobitxo : MonoBehaviour
 {
     [SerializeField]
     private Animator anim;
@@ -23,7 +23,7 @@ public class ControlDialogos : MonoBehaviour
 
     public void ActivarCartel(Textos textObjeto)
     {
-        Debug.Log("MetodoActivarCartel");
+        //Debug.Log("MetodoActivarCartel");
         anim.SetBool("Dialogos", true);
         texto = textObjeto;
         textoPantalla.text = texto.arrayTextos[0];
