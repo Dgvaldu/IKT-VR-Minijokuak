@@ -16,24 +16,17 @@ public class ButtonVR : MonoBehaviour
 
     public Collider collider;
 
-    public Animator AnimColli;
-
     [SerializeField]
     TextMeshProUGUI timerText;
     public float timer = 100f;
     bool denbora = false;
-
-    private void Awake()
-    {
-        collider = GetComponent<Collider>();
-    }
 
     private void Start()
     {
         sound = GetComponent<AudioSource>();
         isPressed = false;
         denbora = false;
-        AnimColli = GetComponent<Animator>();
+        collider.enabled = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -41,14 +34,13 @@ public class ButtonVR : MonoBehaviour
         Debug.Log("Proba1");
         if (!isPressed)
         {
+            Debug.Log("HHH");
             boton.transform.localPosition = new Vector3(0, 0.004f, 0);
             presser = other.gameObject;
             //onPress.Invoke();
             //sound.Play();
-            isPressed = true;
-            AnimColli.SetTrigger("Open");
-            //collider.enabled = false;
-            //collider.GetComponent<BoxCollider>().enabled = false;
+            isPressed = true;            
+            collider.enabled = false;            
         }
         denbora = true;    
     }
@@ -63,7 +55,7 @@ public class ButtonVR : MonoBehaviour
                 int minutes = Mathf.FloorToInt(timer / 60);
                 int seconds = Mathf.FloorToInt(timer % 60);
                 timerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
-                //collider.enabled = false;
+                collider.enabled = false;
             }
             if (timer < 0)
             {

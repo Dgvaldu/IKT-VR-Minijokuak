@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Jolastu Sistemak 2 minijokua.unity
     guid: c95ba739c5833074c93a2e6bd8460e57
+  - enabled: 1
+    path: Assets/Scenes/dead.unity
+    guid: dcfbf71375697b34c96f446c21a61bb8
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 831c5e14ca25f7b47b2e47f9da573851,
       type: 2}
