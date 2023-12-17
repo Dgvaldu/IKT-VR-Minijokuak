@@ -92,6 +92,30 @@ public class LoadsLevels : MonoBehaviour
         string izena = ParaJugar.options[ParaJugar.value].text;
         SceneManager.LoadScene(izena);
     }
+    public void MantenimenduPlayZona() 
+    {
+        SceneManager.LoadScene("Jolastu Mantenimendua minijokua");
+    }
+    public void SareakPlayZona()
+    {
+        SceneManager.LoadScene("Jolastu Sareak minijokua");
+    }
+    public void SegurtasunPlayZona()
+    {
+        SceneManager.LoadScene("Jolastu Segurtasun minijokua");
+    }
+    public void SistemakPlayZona()
+    {
+        SceneManager.LoadScene("Jolastu Sistemak minijokua");
+    }
+    public void Sistemak2PlayZona()
+    {
+        SceneManager.LoadScene("Jolastu Sistemak 2 minijokua");
+    }
+    public void ZebitzuPlayZona()
+    {
+        SceneManager.LoadScene("Jolastu Zerbitzuak minijokua");
+    }
     public void Exit() 
     {
         Application.Quit();
