@@ -11,13 +11,14 @@ public class PlayerCombat : MonoBehaviour
         Bate.GetComponent<Grabbable>().IsGrabbable();
         Escudo.GetComponent<Grabbable>().IsGrabbable();
     }*/
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             if (collision.gameObject.name == "Bate")
             {
-                Destroy(gameObject);
+                Debug.Log("Matar");
+                //Destroy(collision.gameObject);
             }
             else if (collision.gameObject.name == "Escudo")
             {
@@ -26,5 +27,5 @@ public class PlayerCombat : MonoBehaviour
             }
 
         }
-    }
+    }*/
 }
