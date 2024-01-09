@@ -15,16 +15,6 @@ public class PlayerCombat : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            if (collision.gameObject.name == "Bate")
-            {
-                Debug.Log("Matar");
-                //Destroy(collision.gameObject);
-            }
-            else if (collision.gameObject.name == "Escudo")
-            {
-                //No le qita daño al Player
-                Debug.Log("No hay daño");
-            }
 
         }
     }*/

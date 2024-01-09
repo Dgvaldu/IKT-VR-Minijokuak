@@ -52,7 +52,16 @@ public class LoadsLevels : MonoBehaviour
     AudioSource MenuVoces;
 
     [SerializeField]
-    AudioClip MenuVoces1;
+    AudioClip MenuVoces1Prueba;
+
+    [SerializeField]
+    AudioClip MenuVoces1_1;
+
+    [SerializeField]
+    AudioClip MenuVoces1_2;
+
+    [SerializeField]
+    AudioClip MenuVoces1_3;
 
     [SerializeField]
     AudioClip MenuVoces2;
@@ -142,14 +151,28 @@ public class LoadsLevels : MonoBehaviour
         MenuVoces.Play();
         FB1 = Barra1.value;
     }
-    private void OnLevelWasLoaded(int level)
+    public void OnLevelWasLoadedhhh(int level)
     {
 
         if (level == 0)
         {
             MenuMusicaYmas.clip = MenuMusica;
             MenuMusicaYmas.Play();
-            MenuVoces.clip = MenuVoces1;
+            MenuVoces.clip = MenuVoces1Prueba;
+            MenuVoces.Play();
+            if (!MenuVoces.isPlaying)
+            {
+                MenuVoces.clip = MenuVoces1_1;
+            }
+            else 
+            {
+                MenuVoces.clip = MenuVoces1_2;
+                if (!MenuVoces.isPlaying)
+                {
+                    MenuVoces.clip = MenuVoces1_3;
+                }
+            }
+            
         }
         else if (level == 1) 
         {

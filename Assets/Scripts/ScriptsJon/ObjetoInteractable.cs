@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class ObjetoInteractable : MonoBehaviour
 {
     public Textos textos;
     [SerializeField]
     private DialogosHarrobitxo controlDialogos;
+
+    [SerializeField]
+    LoadsLevels ControlVoces;
+    public int level;
 
     public bool isQueueFilled = false;
 
@@ -19,6 +24,7 @@ public class ObjetoInteractable : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             controlDialogos.ActivarCartel(textos);
+            ControlVoces.OnLevelWasLoadedhhh(level);
         }
     }
 
