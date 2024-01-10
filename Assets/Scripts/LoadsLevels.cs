@@ -160,7 +160,7 @@ public class LoadsLevels : MonoBehaviour
             MenuMusicaYmas.Play();
             MenuVoces.clip = MenuVoces1Prueba;
             MenuVoces.Play();
-            if (!MenuVoces.isPlaying)
+            /*if (!MenuVoces.isPlaying)
             {
                 MenuVoces.clip = MenuVoces1_1;
             }
@@ -171,7 +171,7 @@ public class LoadsLevels : MonoBehaviour
                 {
                     MenuVoces.clip = MenuVoces1_3;
                 }
-            }
+            }*/
             
         }
         else if (level == 1) 
