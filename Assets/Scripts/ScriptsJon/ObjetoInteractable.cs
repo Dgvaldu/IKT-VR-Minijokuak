@@ -10,21 +10,13 @@ public class ObjetoInteractable : MonoBehaviour
     [SerializeField]
     private DialogosHarrobitxo controlDialogos;
 
-    [SerializeField]
-    LoadsLevels ControlVoces;
-    public int level;
-
     public bool isQueueFilled = false;
-
-    public float Tiempo = 3f;
-    bool denbora = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             controlDialogos.ActivarCartel(textos);
-            ControlVoces.OnLevelWasLoadedhhh(level);
         }
     }
 
@@ -37,26 +29,9 @@ public class ObjetoInteractable : MonoBehaviour
             {
                 controlDialogos.ActivaTexto();
                 isQueueFilled = true;
-            }            
-            denbora = true;            
+            }
+            controlDialogos.denbora = true;            
         }
-    }
-
-    private void Update()
-    {
-        if (denbora == true)
-        {
-            if (Tiempo > 0)
-            {
-                Tiempo -= Time.deltaTime;
-            }
-
-            if (Tiempo < 0)
-            {
-                controlDialogos.SiguienteFrase();
-                Tiempo = 3f;
-            }
-        }        
     }
 
     private void OnTriggerExit(Collider other)
@@ -64,8 +39,8 @@ public class ObjetoInteractable : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             controlDialogos.CierraCartel();
-            denbora = false;
+            controlDialogos.denbora = false;
         }
-        Tiempo = 4f;
+        controlDialogos.Tiempo = 4f;
     }
 }

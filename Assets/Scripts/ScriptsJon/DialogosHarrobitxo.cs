@@ -9,6 +9,7 @@ public class DialogosHarrobitxo : MonoBehaviour
     [SerializeField]
     private Animator anim;
     private Queue<string> colaDialogos = new Queue<string>();
+    private Queue<AudioClip> colaAudios = new Queue<AudioClip>();
    
     Textos texto;
     [SerializeField] TextMeshProUGUI textoPantalla;
@@ -21,6 +22,9 @@ public class DialogosHarrobitxo : MonoBehaviour
     [SerializeField]
     ObjetoInteractable OInteractable;
 
+    [SerializeField]
+    AudioSource audioSource;
+
     public void ActivarCartel(Textos textObjeto)
     {
         //Debug.Log("MetodoActivarCartel");
@@ -32,12 +36,35 @@ public class DialogosHarrobitxo : MonoBehaviour
     public void ActivaTexto()
     {
         colaDialogos.Clear();
+        colaAudios.Clear();
         foreach (string textoGuardar in texto.arrayTextos)
         {
             colaDialogos.Enqueue(textoGuardar);
         }
+        foreach (AudioClip audioGuardar in texto.arrayClips)
+        {
+            colaAudios.Enqueue(audioGuardar);
+        }
         SiguienteFrase();
 
+    }
+
+    public float Tiempo = 4f;
+    public bool denbora = false;
+    private void Update()
+    {
+        if (denbora == true)
+        {
+            if (Tiempo > 0)
+            {
+                Tiempo -= Time.deltaTime;
+            }
+
+            if (Tiempo < 0 && colaDialogos.Count != 0)
+            {
+                SiguienteFrase();
+            }
+        }
     }
 
     public void SiguienteFrase()
@@ -55,6 +82,10 @@ public class DialogosHarrobitxo : MonoBehaviour
 
         string fraseActual = colaDialogos.Dequeue();
         textoPantalla.text = fraseActual;
+
+        audioSource.clip = colaAudios.Dequeue();
+        Tiempo = audioSource.clip.length + 1;
+        audioSource.Play();
 
     }
     public void CierraCartel()

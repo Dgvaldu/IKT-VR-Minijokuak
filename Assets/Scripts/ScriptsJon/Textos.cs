@@ -7,4 +7,5 @@ public class Textos
 {
     [TextArea(2, 6)]
     public string[] arrayTextos;
+    public AudioClip[] arrayClips;
 }
