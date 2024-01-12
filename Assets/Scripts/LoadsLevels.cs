@@ -126,7 +126,7 @@ public class LoadsLevels : MonoBehaviour
         FB1 = Barra1.value;
     }
     [SerializeField] int voces_index = 0;
-    public void OnLevelWasLoadedDialogos(int level)
+    public void OnLevelWasLoaded(int level)
     {
 
         if (level == 0)

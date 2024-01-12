@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -120,6 +120,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &139684563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5322327640888437899, guid: 49694295a4b5b38458328581f1ce6dc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1307561209}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &139684566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139684563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1001 &146111622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -250,9 +300,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8610891853948968497, guid: dc22fb02d8861dd49875b7b38c896c1a,
         type: 3}
+      propertyPath: scene
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610891853948968497, guid: dc22fb02d8861dd49875b7b38c896c1a,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2103050207}
+    - target: {fileID: 8610891853948968497, guid: dc22fb02d8861dd49875b7b38c896c1a,
+        type: 3}
       propertyPath: OInteractable
       value: 
       objectReference: {fileID: 1575681771}
+    - target: {fileID: 8610891853948968497, guid: dc22fb02d8861dd49875b7b38c896c1a,
+        type: 3}
+      propertyPath: sceneChangeDialog
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -608,7 +673,7 @@ GameObject:
   - component: {fileID: 529464419}
   - component: {fileID: 529464420}
   m_Layer: 0
-  m_Name: AudioSource
+  m_Name: XVoces
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -725,6 +790,56 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &609953588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2698362738737289790, guid: 49694295a4b5b38458328581f1ce6dc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1307561209}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &609953595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609953588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &662199871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,6 +1821,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1050680001853905929, guid: 49694295a4b5b38458328581f1ce6dc1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1440391047915553476, guid: 49694295a4b5b38458328581f1ce6dc1,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1779,6 +1899,11 @@ PrefabInstance:
     - target: {fileID: 4576436103157752843, guid: 49694295a4b5b38458328581f1ce6dc1,
         type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608225262542117910, guid: 49694295a4b5b38458328581f1ce6dc1,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4720035786107437974, guid: 49694295a4b5b38458328581f1ce6dc1,
@@ -1973,7 +2098,15 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 150327726}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5322327640888437899, guid: 49694295a4b5b38458328581f1ce6dc1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 139684566}
+    - targetCorrespondingSourceObject: {fileID: 2698362738737289790, guid: 49694295a4b5b38458328581f1ce6dc1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 609953595}
   m_SourcePrefab: {fileID: 100100000, guid: 49694295a4b5b38458328581f1ce6dc1, type: 3}
 --- !u!1 &1364395742
 GameObject:
@@ -2793,7 +2926,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096563698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1053}
+  m_LocalPosition: {x: 0, y: 0, z: 30105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2803,7 +2936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38, y: -33}
+  m_AnchoredPosition: {x: -38, y: 208}
   m_SizeDelta: {x: 504, y: 284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2096563700
@@ -2823,7 +2956,7 @@ MonoBehaviour:
   sceneChangeDialog: 1
   scene: MainMenu
   OInteractable: {fileID: 1575681771}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 529464420}
   Tiempo: 4
   denbora: 0
 --- !u!95 &2096563701
@@ -2897,7 +3030,7 @@ GameObject:
   - component: {fileID: 2103050206}
   - component: {fileID: 2103050207}
   m_Layer: 0
-  m_Name: AudioSource
+  m_Name: XVoces
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

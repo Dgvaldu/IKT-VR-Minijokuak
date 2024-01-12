@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17463167, g: 0.21842617, b: 0.30068737, a: 1}
+  m_IndirectSpecularColor: {r: 0.17463198, g: 0.2184267, b: 0.30068785, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2856,7 +2856,7 @@ GameObject:
   - component: {fileID: 1105880875}
   - component: {fileID: 1105880876}
   m_Layer: 0
-  m_Name: AudioSource
+  m_Name: XVoces
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4053,17 +4053,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9243cfefa14a64542a4a00b9769419e5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1
+      value: 1.138
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9243cfefa14a64542a4a00b9769419e5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.15
+      value: 0.334
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9243cfefa14a64542a4a00b9769419e5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.25
+      value: 2.007
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9243cfefa14a64542a4a00b9769419e5,
         type: 3}

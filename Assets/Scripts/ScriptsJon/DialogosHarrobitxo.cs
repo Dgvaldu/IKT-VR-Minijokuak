@@ -10,7 +10,7 @@ public class DialogosHarrobitxo : MonoBehaviour
     private Animator anim;
     private Queue<string> colaDialogos = new Queue<string>();
     private Queue<AudioClip> colaAudios = new Queue<AudioClip>();
-   
+
     Textos texto;
     [SerializeField] TextMeshProUGUI textoPantalla;
 
@@ -62,23 +62,29 @@ public class DialogosHarrobitxo : MonoBehaviour
 
             if (Tiempo < 0 && colaDialogos.Count != 0)
             {
+                Debug.Log("Siguiente frase");
                 SiguienteFrase();
+            }
+
+            if (Tiempo < 0 && colaDialogos.Count == 0 && colaAudios.Count == 0)
+            {
+                //if (colaDialogos.Count == 0 && colaAudios.Count == 0)
+                //{
+                    CierraCartel();
+                    OInteractable.isQueueFilled = false;
+                    if (sceneChangeDialog)
+                    {
+                        SceneManager.LoadScene(scene);
+                    }
+                    return;
+                //}
             }
         }
     }
 
     public void SiguienteFrase()
     {
-        if (colaDialogos.Count == 0)
-        {
-            CierraCartel();
-            OInteractable.isQueueFilled = false;
-            if (sceneChangeDialog)
-            {
-                SceneManager.LoadScene(scene);
-            }
-            return; 
-        }
+
 
         string fraseActual = colaDialogos.Dequeue();
         textoPantalla.text = fraseActual;
@@ -86,6 +92,8 @@ public class DialogosHarrobitxo : MonoBehaviour
         audioSource.clip = colaAudios.Dequeue();
         Tiempo = audioSource.clip.length + 1;
         audioSource.Play();
+
+        Debug.Log(colaAudios.Count + " " + colaAudios.Count);
 
     }
     public void CierraCartel()
