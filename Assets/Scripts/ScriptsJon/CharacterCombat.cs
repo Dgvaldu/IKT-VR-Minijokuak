@@ -9,7 +9,7 @@ public class CharacterCombat : MonoBehaviour
     private float attackRate;
 
     [SerializeField]
-    private Health health;    
+    private PlayerHealth health;    
 
     public float damageToPlayer;    
 
@@ -19,7 +19,7 @@ public class CharacterCombat : MonoBehaviour
 
     private void Start()
     {
-        health = GameObject.Find("PlayerController").GetComponent<Health>();
+        health = GameObject.Find("PlayerController").GetComponent<PlayerHealth>();
     }
 
     private void Update()
