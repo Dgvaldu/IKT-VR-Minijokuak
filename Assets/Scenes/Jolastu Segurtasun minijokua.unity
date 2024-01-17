@@ -1052,7 +1052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRate: 0.5
-  health: {fileID: 1599720343}
+  health: {fileID: 1599720372}
   damageToPlayer: 5
 --- !u!114 &1349979210
 MonoBehaviour:
@@ -1155,20 +1155,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1949916570}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1599720343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1599720328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67bd0147ad4bf584490901cbc4665dea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  healthBar: {fileID: 2121994351}
 --- !u!4 &1599720344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3705375213340719186, guid: 728a6d8f40bb09e4aa21a51f57f1608f,
@@ -1198,6 +1184,20 @@ CapsuleCollider:
   m_Height: 1.5587544
   m_Direction: 1
   m_Center: {x: 0, y: -0.27937722, z: 0.04672882}
+--- !u!114 &1599720372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599720328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67e4f1d0eb94a54caf58bea7711da0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  healthBar: {fileID: 2121994351}
 --- !u!1 &1612449825 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4691d25c86827334681e65b3f5a7a8f5,
@@ -11183,11 +11183,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7370764909935529881, guid: 728a6d8f40bb09e4aa21a51f57f1608f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1599720343}
+      addedObject: {fileID: 1599720358}
     - targetCorrespondingSourceObject: {fileID: 7370764909935529881, guid: 728a6d8f40bb09e4aa21a51f57f1608f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1599720358}
+      addedObject: {fileID: 1599720372}
     - targetCorrespondingSourceObject: {fileID: 2658829674914157005, guid: 728a6d8f40bb09e4aa21a51f57f1608f,
         type: 3}
       insertIndex: -1
