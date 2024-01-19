@@ -12,7 +12,7 @@ public class LoadsLevels : MonoBehaviour
 
     #region Musica
     [SerializeField]
-    AudioSource MenuMusicaYmas;
+    public AudioSource MenuMusicaYmas;
 
     [SerializeField]
     AudioClip MenuMusica;

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BossGusanoControler : MonoBehaviour
@@ -17,6 +19,8 @@ public class BossGusanoControler : MonoBehaviour
 
     [SerializeField]
     Animator animator;
+
+    Transform[] locators;
 
     public bool isDead;
 
@@ -69,5 +73,19 @@ public class BossGusanoControler : MonoBehaviour
     {
         gameObject.GetComponent<BossAttack>().MeleeAttack();
     }
-
+    float CalcularElMasCercanoAlPlayer()
+    {
+        List<float> distancias = new List<float>();
+        for (int i = 0; i < locators.Length; i++)
+        {
+            distancias.Add(Vector3.Distance(player.transform.position, locators[i].transform.position));
+        }
+        int indice = Array.IndexOf(locators, distancias.Min());
+        return distancias.Min();
+    }
+    Vector3 locatorAleatorio()
+    {
+        int random = UnityEngine.Random.Range(0, locators.Length);
+        return locators[random].transform.position;
+    }
 }

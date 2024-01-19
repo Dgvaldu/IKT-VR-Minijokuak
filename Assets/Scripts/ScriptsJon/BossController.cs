@@ -21,13 +21,14 @@ public class BossController : MonoBehaviour
     [SerializeField]
     float speed = 8.0f;
 
-    [SerializeField]
-    private Transform bulletOrigin;
+    /*[SerializeField]
+    private Transform bulletOrigin;*/
+
     public bool isDead;
 
     private void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.Find("PlayerConByE");
     }
 
     private void OnDrawGizmosSelected()
@@ -51,7 +52,7 @@ public class BossController : MonoBehaviour
                 //animator.SetBool("Iswalking", false);                
                 animator.SetBool("IsAttacking", false);
                 gameObject.transform.LookAt(player.transform);
-                bulletOrigin.LookAt(player.transform);
+                //bulletOrigin.LookAt(player.transform);
                 if (distance <= chaseRange)
                 {
                     //animator.SetBool("Iswalking", true);
@@ -82,12 +83,11 @@ public class BossController : MonoBehaviour
 
     public void MeleeAttack()
     {
-        gameObject.GetComponent<BossAttack>().MeleeAttack();
+        gameObject.GetComponent<FatAttack>().MeleeAttack();
     }
 
-    void Shoot()
+    /*void Shoot()
     {
-        gameObject.GetComponent<BossAttack>().Shoot();
-    }
-
+        gameObject.GetComponent<FatAttack>().Shoot();
+    }*/
 }

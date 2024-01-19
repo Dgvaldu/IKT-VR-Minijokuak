@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class BossHealth : MonoBehaviour
 {
     public float health;
-    private float MAXhealth = 200;
+    private float MAXhealth = 100;
     [SerializeField]
     Animator Ani;
     [SerializeField]
@@ -33,7 +33,7 @@ public class BossHealth : MonoBehaviour
         {
             health = 0;
             bossController.isDead = true;            
-            DeathSound.Play();            
+            //DeathSound.Play();            
             Ani.SetTrigger("IsDeath");
         }
         float newFillAmount = health / MAXhealth;

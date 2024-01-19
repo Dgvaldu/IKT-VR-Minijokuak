@@ -34,6 +34,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private Transform sphereOrigins;
 
+    public bool IsAtacking = false;
+
     private void Start()
     {
         enemy = GetComponent<NavMeshAgent>();
