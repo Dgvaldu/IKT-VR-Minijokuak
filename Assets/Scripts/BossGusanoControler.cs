@@ -19,17 +19,65 @@ public class BossGusanoControler : MonoBehaviour
 
     [SerializeField]
     Animator animator;
-
+    
+    [SerializeField]
     Transform[] locators;
 
     public bool isDead;
 
+    public float moveSpeed = 5f;
+    public float timeBetweenAttacks = 3f;
+    public float attackDuration = 2f;
+
+    private bool isAttacking = false;
+    private Vector3 initialPosition;
+    private Vector3 targetPosition;
+
     private void Start()
     {
         player = GameObject.Find("Player");
+        initialPosition = transform.position;
+        StartCoroutine(BossBehavior());
+
+    }
+    IEnumerator BossBehavior()
+    {
+        while (true)
+        {
+            yield return MoveToLocatorsLocation();
+            yield return new WaitForSeconds(timeBetweenAttacks);
+            yield return Attack();
+        }
+    }
+    IEnumerator MoveToLocatorsLocation()
+    {
+        isAttacking = false;
+        targetPosition = locatorAleatorio();
+        float elapsedTime = 0f;
+
+        while (elapsedTime < moveSpeed)
+        {
+            transform.position = Vector3.Lerp(initialPosition, targetPosition, elapsedTime / moveSpeed);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = targetPosition;
+        initialPosition = targetPosition;
     }
 
-    private void OnDrawGizmosSelected()
+    IEnumerator Attack()
+    {
+        isAttacking = true;
+        // Puedes agregar aquí la lógica de ataque del gusano
+        Debug.Log("Gusano atacando...");
+
+        yield return new WaitForSeconds(attackDuration);
+
+        isAttacking = false;
+    }
+
+private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(gameObject.transform.position, chaseRange);
@@ -66,6 +114,7 @@ public class BossGusanoControler : MonoBehaviour
 
                 }
             }
+            CalcularElMasCercanoAlPlayer();
         }
     }
 

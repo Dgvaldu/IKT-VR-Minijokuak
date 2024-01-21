@@ -14,7 +14,7 @@ public class BossGusanoHealth : MonoBehaviour
     private Image BosshealthSprite;
     public AudioSource DeathSound;
 
-    public BossController bossController;
+    public BossGusanoControler bossController;
 
     private void Awake()
     {
